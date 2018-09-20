@@ -13,7 +13,7 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('order', function (Blueprint $table) {
             $table->increments('OrderID');
             $table->integer('CustomersID')->unsigned();
             $table->decimal('OrderPrice', 5,2)->unsigned()->nullable();

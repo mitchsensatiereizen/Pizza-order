@@ -13,7 +13,7 @@ class CreateZipcodesTable extends Migration
      */
     public function up()
     {
-        Schema::create('zipcodes', function (Blueprint $table) {
+        Schema::create('zipcode', function (Blueprint $table) {
             $table->increments('ZipcodeID');
             $table->integer('TownshipID')->unsigned();
             $table->string('Zipcode', 6)->nullable();

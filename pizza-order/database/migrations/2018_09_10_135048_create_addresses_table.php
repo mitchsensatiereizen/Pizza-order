@@ -13,7 +13,7 @@ class CreateAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('addresses', function (Blueprint $table) {
+        Schema::create('address', function (Blueprint $table) {
             $table->increments('AddressID');
             $table->integer('ZipcodeID')->unsigned();
             $table->string('AddressNumberSuffix', 100)->nullable();
