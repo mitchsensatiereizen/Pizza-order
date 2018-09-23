@@ -17,7 +17,7 @@ class CreateProductSizeTable extends Migration
             $table->increments('ProductSizeID');
             $table->integer('ProductID')->unsigned();
             $table->integer('SizeID')->unsigned();
-            $table->foreign('ProductID')->references('ProductID')->on('products');
+            $table->foreign('ProductID')->references('ProductID')->on('product');
             $table->foreign('SizeID')->references('SizeID')->on('size');
             $table->timestamps();
         });

@@ -22,7 +22,7 @@ class CreateStoreTable extends Migration
             $table->string('StoreCity', 100)->nullable();
             $table->string('StoreEmail', 100)->nullable();
             $table->string('StoreCoordination', 100)->nullable();
-            $table->foreign('ZipcodeID')->references('ZipcodeID')->on('zipcodes');
+            $table->foreign('ZipcodeID')->references('ZipcodeID')->on('zipcode');
             $table->timestamps();
         });
     }

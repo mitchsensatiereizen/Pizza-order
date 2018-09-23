@@ -19,7 +19,7 @@ class CreateCouponTable extends Migration
             $table->string('CouponName', 100)->nullable();
             $table->integer('CouponCode')->length(10)->unsigned()->nullable();
             $table->decimal('CouponValue', 2,0)->unsigned()->nullable();
-            $table->foreign('OrderID')->references('OrderID')->on('orders');
+            $table->foreign('OrderID')->references('OrderID')->on('order');
             $table->timestamps();
         });
     }

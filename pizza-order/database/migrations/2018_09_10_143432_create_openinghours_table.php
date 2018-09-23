@@ -13,7 +13,7 @@ class CreateOpeninghoursTable extends Migration
      */
     public function up()
     {
-        Schema::create('openinghours', function (Blueprint $table) {
+        Schema::create('openinghour', function (Blueprint $table) {
             $table->increments('OpeningHourID');
             $table->integer('StoreID')->unsigned();
             $table->string('OpeningDay', 100)->nullable();
@@ -32,6 +32,6 @@ class CreateOpeninghoursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('openinghours');
+        Schema::dropIfExists('openinghour');
     }
 }

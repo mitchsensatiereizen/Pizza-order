@@ -18,7 +18,7 @@ class CreateStatusTable extends Migration
             $table->integer('OrderID')->unsigned();
             $table->string('StatusName', 100)->nullable();
             $table->string('StatusDescription', 100)->nullable();;
-            $table->foreign('OrderID')->references('OrderID')->on('orders');
+            $table->foreign('OrderID')->references('OrderID')->on('order');
             $table->timestamps();
         });
     }

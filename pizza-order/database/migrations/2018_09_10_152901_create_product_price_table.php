@@ -17,7 +17,7 @@ class CreateProductPriceTable extends Migration
             $table->increments('ProductPriceID');
             $table->integer('ProductID')->unsigned();
             $table->integer('PriceID')->unsigned();
-            $table->foreign('ProductID')->references('ProductID')->on('products');
+            $table->foreign('ProductID')->references('ProductID')->on('product');
             $table->foreign('PriceID')->references('PriceID')->on('price');
             $table->timestamps();
         });
