@@ -11,6 +11,14 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+       DB::table('product')->insert([
+        	'ProductName' => 'Bacon Gorgonzola',
+        ]);
+       DB::table('product')->insert([
+        	'ProductName' => 'Pollo Pomodore',
+        ]);
+       DB::table('product')->insert([
+        	'ProductName' => 'BBQ Mixed Grill',
+        ]);
     }
 }

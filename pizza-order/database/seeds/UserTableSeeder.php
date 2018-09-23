@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
 
-class UsersTablesSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,11 +11,12 @@ class UsersTablesSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
+        DB::table('user')->insert([
         	'name' => 'Mitch Walravens',
         	'email' => 'mitch@sensatiereizen.nl',
         	'password' => Hash::make('password'),
         	'remember_token' => str_random(10),
         ]);
+
     }
 }
