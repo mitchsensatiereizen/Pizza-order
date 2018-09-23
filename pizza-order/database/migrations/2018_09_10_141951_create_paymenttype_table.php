@@ -18,7 +18,7 @@ class CreatePaymenttypeTable extends Migration
             $table->integer('OrderID')->unsigned();
             $table->string('PaymentTypeName', 100)->nullable();
             $table->string('PaymentTypeDescription', 100)->nullable();;
-            $table->foreign('OrderID')->references('OrderID')->on('orders');
+            $table->foreign('OrderID')->references('OrderID')->on('order');
             $table->timestamps();
         });
     }

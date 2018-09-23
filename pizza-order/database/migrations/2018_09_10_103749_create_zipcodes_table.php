@@ -34,6 +34,6 @@ class CreateZipcodesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('zipcodes');
+        Schema::dropIfExists('zipcode');
     }
 }

@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->decimal('TotalPrice', 5,2)->unsigned()->nullable();
             $table->string('IpAddress', 20)->nullable();
             $table->string('OrderComment', 200)->nullable();
-            $table->foreign('CustomersID')->references('CustomersID')->on('customers');
+            $table->foreign('CustomersID')->references('CustomersID')->on('customer');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('order');
     }
 }

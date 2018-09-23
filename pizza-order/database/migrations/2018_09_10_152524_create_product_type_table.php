@@ -17,7 +17,7 @@ class CreateProductTypeTable extends Migration
             $table->increments('ProductTypeID');
             $table->integer('ProductID')->unsigned();
             $table->integer('TypeID')->unsigned();
-            $table->foreign('ProductID')->references('ProductID')->on('products');
+            $table->foreign('ProductID')->references('ProductID')->on('product');
             $table->foreign('TypeID')->references('TypeID')->on('type');
             $table->timestamps();
         });

@@ -32,6 +32,6 @@ class CreateOpeninghoursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('openinghours');
+        Schema::dropIfExists('openinghour');
     }
 }

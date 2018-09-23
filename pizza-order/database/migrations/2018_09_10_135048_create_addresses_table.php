@@ -18,7 +18,7 @@ class CreateAddressesTable extends Migration
             $table->integer('ZipcodeID')->unsigned();
             $table->string('AddressNumberSuffix', 100)->nullable();
             $table->string('AddressNumberPrefix', 100)->nullable();;
-            $table->foreign('ZipcodeID')->references('ZipcodeID')->on('zipcodes');
+            $table->foreign('ZipcodeID')->references('ZipcodeID')->on('zipcode');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addresses');
+        Schema::dropIfExists('address');
     }
 }
