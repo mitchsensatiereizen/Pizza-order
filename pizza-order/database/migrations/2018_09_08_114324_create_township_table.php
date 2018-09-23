@@ -15,6 +15,7 @@ class CreateTownshipTable extends Migration
     {
            Schema::create('township', function($table){
                 $table->increments('TownshipID');
+                $table->string('TownshipName', 50)->nullable();
                 $table->timestamps();
             });
     }
