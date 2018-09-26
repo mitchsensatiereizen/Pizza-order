@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('importExport', 'MaatwebsiteDemoController@importExport');
+
+Route::get('downloadExcel/{type}', 'MaatwebsiteDemoController@downloadExcel');
+
+Route::post('importExcel', 'MaatwebsiteDemoController@importExcel');
